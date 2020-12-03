@@ -28,11 +28,10 @@ public class ActionController {
     private final ActionInConverter converter;
 
     @PostMapping
-    public ResponseEntity.BodyBuilder save(@Valid @RequestBody ActionIn in) {
+    public ResponseEntity<?> save(@Valid @RequestBody ActionIn in) {
         log.info(in.toString());
         repository.save(converter.apply(in));
-
-        return ResponseEntity.status(HttpStatus.CREATED);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
 }
