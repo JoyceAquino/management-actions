@@ -1,0 +1,22 @@
+package com.produtize.managementactions.converter;
+
+import com.produtize.managementactions.dto.ActionIn;
+import com.produtize.managementactions.model.Action;
+
+import java.util.Date;
+import java.util.Locale;
+import java.util.function.Function;
+
+public class ActionInConverter implements Function<ActionIn, Action> {
+    @Override
+    public Action apply(ActionIn actionIn) {
+        var action = new Action();
+        action.setActive(actionIn.getActive().toUpperCase(Locale.ROOT));
+        action.setBuyPrice(actionIn.getBuyPrice());
+        action.setSalePrice(actionIn.getSalePrice());
+        action.setQuantity(actionIn.getQuantity());
+        action.setUpdatedAt(new Date());
+        action.setSaleDate(actionIn.getSaleDate());
+        return action;
+    }
+}
