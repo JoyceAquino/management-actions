@@ -8,6 +8,7 @@ import org.springframework.lang.NonNull;
 
 
 import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 
@@ -33,6 +34,7 @@ public class ActionIn {
     private Date SaleDate;
 
     @NonNull
+    @NotBlank
     private String Active;
 
 

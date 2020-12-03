@@ -19,4 +19,12 @@ public class ControllerFixtures {
     public static ActionIn getActionInWithSalePriceAndBuyPriceValidationErros() {
         return new ActionIn(0.0, 0.0, Action.Currency.BRL, 10, new Date(), VVAR);
     }
+
+    public static ActionIn getActionInWithQuantityValidationErros() {
+        return new ActionIn(10.0, 10.0, Action.Currency.BRL, 0, new Date(), VVAR);
+    }
+
+    public static ActionIn getActionInWithActionValidationErros() {
+        return new ActionIn(10.0, 10.0, Action.Currency.BRL, 10, new Date(),"");
+    }
 }

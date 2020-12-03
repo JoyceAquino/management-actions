@@ -74,4 +74,16 @@ public class ActionControllerTest {
         Set<ConstraintViolation<ActionIn>> violations = validator.validate(ControllerFixtures.getActionInWithSalePriceAndBuyPriceValidationErros());
         assertEquals(violations.size(),2);
     }
+
+    @Test
+    public void should_have_violations_in_Quantity(){
+        Set<ConstraintViolation<ActionIn>> violations = validator.validate(ControllerFixtures.getActionInWithQuantityValidationErros());
+        assertEquals(violations.size(),1);
+    }
+
+    @Test
+    public void should_have_violations_in_Action_Name(){
+        Set<ConstraintViolation<ActionIn>> violations = validator.validate(ControllerFixtures.getActionInWithActionValidationErros());
+        assertEquals(violations.size(),1);
+    }
 }
