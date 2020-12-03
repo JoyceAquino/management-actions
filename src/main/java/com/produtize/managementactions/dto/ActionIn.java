@@ -26,8 +26,13 @@ public class ActionIn {
     @Builder.Default
     private Action.Currency currency = Action.Currency.BRL;
 
+    @DecimalMin(value = "1")
     private int Quantity;
+
+    @NonNull
     private Date SaleDate;
+
+    @NonNull
     private String Active;
 
 
