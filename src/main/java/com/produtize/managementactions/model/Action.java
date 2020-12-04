@@ -12,7 +12,7 @@ import java.util.Date;
 public class Action {
 
     @Id
-    private ObjectId Id;
+    private ObjectId id;
     private String active;
     private int quantity;
     private Double buyPrice;
