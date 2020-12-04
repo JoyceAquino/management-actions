@@ -14,7 +14,7 @@
     <name>Management Actions</name>
     <description>Serviço de gerenciamento de ações</description>
     <properties>
-        <java.version>15</java.version>
+        <java.version>11</java.version>
         <spring-cloud.version>Hoxton.SR4</spring-cloud.version>
     </properties>
 
@@ -41,6 +41,11 @@
             <groupId>org.springframework.plugin</groupId>
             <artifactId>spring-plugin-core</artifactId>
             <version>2.0.0.RELEASE</version>
+        </dependency>
+        <!-- Web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <!-- Actuator -->

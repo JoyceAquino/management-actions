@@ -27,4 +27,12 @@ public class ControllerFixtures {
     public static ActionIn getActionInWithActionValidationErros() {
         return new ActionIn(10.0, 10.0, Action.Currency.BRL, 10, new Date(),"");
     }
+
+    public static Action getActionWithoutValidationErros() {
+        Action action = new Action();
+        action.setSaleDate(new Date());
+        action.setBuyPrice(100.9);
+        action.setSalePrice(100.9);
+        return action;
+    }
 }

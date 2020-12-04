@@ -53,9 +53,11 @@ public class ActionControllerTest {
     @Test
     public void should_create_action(){
         ActionIn in = mock(ActionIn.class);
+
         var responseEntity = controller.save(in);
         assertEquals(responseEntity.getStatusCode(), HttpStatus.CREATED);
     }
+
 
     @Test
     public void should_have_no_violations(){
