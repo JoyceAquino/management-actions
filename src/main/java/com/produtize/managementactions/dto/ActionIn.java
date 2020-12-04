@@ -4,10 +4,9 @@ import com.produtize.managementactions.model.Action;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import org.springframework.lang.NonNull;
 
 import javax.validation.constraints.DecimalMin;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 
@@ -15,11 +14,9 @@ import java.util.Date;
 @AllArgsConstructor
 public class ActionIn {
 
-    @NonNull
     @DecimalMin(value = "0.01")
     private Double buyPrice;
 
-    @NonNull
     @DecimalMin(value = "0.01")
     private Double salePrice;
 
@@ -29,11 +26,10 @@ public class ActionIn {
     @DecimalMin(value = "1")
     private int quantity;
 
+    @NotNull
     private Date saleDate;
 
-    @NonNull
-    @NotBlank
+    @NotNull
     private String active;
-
 
 }
