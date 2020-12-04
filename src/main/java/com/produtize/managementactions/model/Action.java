@@ -13,15 +13,15 @@ public class Action {
 
     @Id
     private ObjectId Id;
-    private String Active;
-    private int Quantity;
-    private Double BuyPrice;
-    private Double SalePrice;
-    private Double Variation;
+    private String active;
+    private int quantity;
+    private Double buyPrice;
+    private Double salePrice;
+    private Double variation;
 
-    private Date SaleDate;
-    private Date CreatedAt;
-    private Date UpdatedAt;
+    private Date saleDate;
+    private Date createdAt;
+    private Date updatedAt;
 
     public enum Currency {BRL, USD}
 }
