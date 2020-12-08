@@ -32,4 +32,15 @@ public class ActionIn {
     @NotNull
     private String active;
 
+    @Override
+    public String toString() {
+        return "{" +
+                "buyPrice=" + buyPrice +
+                ", salePrice=" + salePrice +
+                ", currency=" + currency +
+                ", quantity=" + quantity +
+                ", saleDate=" + saleDate +
+                ", active='" + active + '\'' +
+                '}';
+    }
 }
