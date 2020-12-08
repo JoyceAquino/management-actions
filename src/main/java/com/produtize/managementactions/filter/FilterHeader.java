@@ -15,6 +15,7 @@ import java.io.IOException;
 public class FilterHeader implements Filter {
 
     private static final String X_USERNAME = "x_username";
+    private static final String X_TOKEN = "Authorization";
     private final RequestContext requestContext;
 
     @Override
@@ -23,7 +24,9 @@ public class FilterHeader implements Filter {
         HttpServletRequest httpRequest = (HttpServletRequest) request;
 
         String username = httpRequest.getHeader(X_USERNAME);
+        String token = httpRequest.getHeader(X_TOKEN);
         requestContext.setUsername(username);
+        requestContext.setToken(token);
 
         MDC.put("method", httpRequest.getMethod());
         MDC.put("user.name", username);

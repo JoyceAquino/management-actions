@@ -13,4 +13,5 @@ public class RequestContext {
 
     private UUID id = UUID.randomUUID();
     private String username;
+    private String token;
 }
