@@ -5,7 +5,8 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
 @Document(collection = "actions")
@@ -19,9 +20,11 @@ public class Action {
     private Double salePrice;
     private Double variation;
 
-    private Date saleDate;
-    private Date createdAt;
-    private Date updatedAt;
+    private LocalDate saleDate;
+
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
+    private Currency currency;
 
     public enum Currency {BRL, USD}
 }

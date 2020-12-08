@@ -7,7 +7,7 @@ import lombok.Data;
 
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
-import java.util.Date;
+import java.time.LocalDate;
 
 
 @Data
@@ -27,7 +27,7 @@ public class ActionIn {
     private int quantity;
 
     @NotNull
-    private Date saleDate;
+    private LocalDate saleDate;
 
     @NotNull
     private String active;

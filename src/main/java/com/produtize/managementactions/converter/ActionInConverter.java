@@ -5,7 +5,7 @@ import com.produtize.managementactions.model.Action;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.Locale;
 import java.util.function.Function;
 
@@ -20,7 +20,7 @@ public class ActionInConverter implements Function<ActionIn, Action> {
         action.setBuyPrice(actionIn.getBuyPrice());
         action.setSalePrice(actionIn.getSalePrice());
         action.setQuantity(actionIn.getQuantity());
-        action.setUpdatedAt(new Date());
+        action.setUpdatedAt(LocalDateTime.now());
         action.setSaleDate(actionIn.getSaleDate());
         return action;
     }
