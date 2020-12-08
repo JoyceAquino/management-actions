@@ -20,7 +20,6 @@ import java.util.ArrayList;
 @Slf4j
 public class ActionController {
 
-    //TODO Adicionar MDC e campos do contexto de request no log
     //TODO Id location no created.
 
     private final ActionRepository repository;
@@ -35,7 +34,7 @@ public class ActionController {
     }
 
     @GetMapping
-    public ArrayList<ActionOut> getAll() {
+    public ArrayList<ActionOut> findAll() {
         return outConverter.apply(repository.findAll());
     }
 }
